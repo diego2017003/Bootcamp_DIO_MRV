@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cliente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-18 06:32:37 "/>
+        <attribute name="created" value="Q2xpZW50ZTtERVNLVE9QLU5PQ0U0NTg7MjAyMS0wNS0xODsiMDY6MjY6MTIgIjsyOTM2"/>
+        <attribute name="edited" value="Q2xpZW50ZTtERVNLVE9QLU5PQ0U0NTg7MjAyMS0wNS0xODsiMDY6MzI6MzcgIjsxOzMwNDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1, nota2, nota3, nota4, media" type="Real" array="False" size=""/>
+            <input variable="nota1"/>
+            <input variable="nota2"/>
+            <input variable="nota3"/>
+            <input variable="nota4"/>
+            <assign variable="media" expression="(nota1+nota2+nota3+nota4)/4"/>
+            <output expression="media" newline="True"/>
+            <if expression="media&gt;=7.0">
+                <then>
+                    <output expression="&quot;Aprovado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Recupera&#231;&#227;o&quot;" newline="True"/>
+                    <declare name="notaRec" type="Integer" array="False" size=""/>
+                    <input variable="notaRec"/>
+                    <assign variable="media" expression="(media+notaRec)/2"/>
+                    <if expression="media&gt;=7.0">
+                        <then>
+                            <output expression="&quot;Aprovado&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Reprovado&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cliente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-18 06:45:43 "/>
+        <attribute name="created" value="Q2xpZW50ZTtERVNLVE9QLU5PQ0U0NTg7MjAyMS0wNS0xODsiMDY6MzI6NDAgIjsyOTM0"/>
+        <attribute name="edited" value="Q2xpZW50ZTtERVNLVE9QLU5PQ0U0NTg7MjAyMS0wNS0xODsiMDY6NDU6NDMgIjsyOzMwNTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="janeiro, fevereiro, marco, abril, media" type="Real" array="False" size=""/>
+            <input variable="janeiro"/>
+            <input variable="fevereiro"/>
+            <input variable="marco"/>
+            <input variable="abril"/>
+            <assign variable="media" expression="(janeiro*28 + fevereiro*31 + marco*28+abril*30)/119"/>
+            <output expression="&quot;ponderamos a media proporcional ao numero de dias, quanto menos dias tem o mes maior o peso do mes para o calculo&quot;" newline="True"/>
+            <output expression="media" newline="True"/>
+            <if expression="media&gt;=5000.0">
+                <then>
+                    <output expression="&quot;abono de 10%&quot;" newline="True"/>
+                    <declare name="abono" type="Real" array="False" size=""/>
+                    <assign variable="abono" expression="media*0.1"/>
+                    <output expression="abono" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;abono de 3%&quot;" newline="True"/>
+                    <declare name="abono" type="Real" array="False" size=""/>
+                    <assign variable="abono" expression="media*0.03"/>
+                    <output expression="abono" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
